@@ -1,0 +1,16 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: "http://localhost:9098/realms/ms-kafka"
+  config:
+    import: optional:configserver:http://localhost:8888
+  application:
+    name: gateway-service
+
+logging:
+  level:
+    org:
+      springframework:
+        gateway: DEBUG
